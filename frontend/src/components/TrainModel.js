@@ -25,6 +25,8 @@ const TrainModel = () => {
 
   return (
     <div>
+      <h2>Train Model</h2>
+      <p>This model is trained on Shakespeare's text dataset.</p>
       <form onSubmit={handleSubmit}>
         <input
           type="number"

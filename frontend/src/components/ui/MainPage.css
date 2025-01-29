@@ -1,143 +1,104 @@
+@import '../common.css';
+
 .main-page {
-    text-align: center;
-  }
-  
-  .main-header {
-    background-color: #282c34;
-    color: white;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .career-path {
-    padding: 40px 20px;
-    background-color: #f4f4f9;
-  }
-  
-  .career-path h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .timeline {
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px 0;
-  }
-  
-  .timeline::before {
-    content: '';
-    position: absolute;
-    width: 4px;
-    background-color: #333;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .timeline-item {
-    display: flex;
-    justify-content: flex-end;
-    padding: 20px 0;
-    position: relative;
-    width: 50%;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-  
-  .timeline-item:nth-child(odd) {
-    left: -10%;
-  }
-  
-  .timeline-item:nth-child(even) {
-    left: 60%;
-    justify-content: flex-start;
-  }
-  
-  .timeline-item:nth-child(odd) .timeline-content {
-    text-align: right;
-  }
-  
-  .timeline-item:nth-child(even) .timeline-content {
-    text-align: left;
-  }
-  
-  .timeline-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    width: 80%;
-  }
-  
-  .timeline-content h3 {
-    margin-top: 0;
-    color: #333;
-  }
-  
-  .timeline-content p {
-    margin: 5px 0;
-    color: #666;
-  }
-  
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: #333;
-    border-radius: 50%;
-    top: 20px;
-    left: -10px;
-    transform: translateX(-50%);
-  }
-  
-  .timeline-item:nth-child(even)::before {
-    left: auto;
-    right: -10px;
-    transform: translateX(50%);
-  }
-  
-  .timeline-item.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .main-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
-  }
-  
-  .block {
-    background: #f9f9f9;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px;
-    width: 30%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .block:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .block h2 {
-    margin-top: 0;
-  }
-  
-  .block p {
-    color: #555;
-  }
+  text-align: center;
+}
+
+.main-header {
+  background-color: #282c34;
+  color: white;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.career-path {
+  padding: 40px 20px;
+  background-color: #f4f4f9;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #333;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 0;
+  position: relative;
+  width: 50%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.timeline-item:nth-child(odd) {
+  left: -10%;
+}
+
+.timeline-item:nth-child(even) {
+  left: 60%;
+  justify-content: flex-start;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  text-align: left;
+}
+
+.timeline-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 80%;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  border-radius: 50%;
+  top: 20px;
+  left: -10px;
+  transform: translateX(-50%);
+}
+
+.timeline-item:nth-child(even)::before {
+  left: auto;
+  right: -10px;
+  transform: translateX(50%);
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.main-content {
+  /* Inherit styles from common.css */
+}

@@ -1,0 +1,36 @@
+@import './common.css';
+
+.container {
+  max-width: 100%;
+  padding: 20px;
+}
+
+.card {
+  /* Inherit styles from common.css */
+}
+
+.output {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  white-space: pre-wrap; /* Preserve spaces and new lines */
+}
+
+.output h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #444;
+}
+
+.output p {
+  margin-bottom: 0;
+}
+
+button {
+  margin-right: 10px; /* Add margin to separate buttons */
+}
