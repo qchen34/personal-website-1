@@ -6,7 +6,7 @@ import os
 import traceback
 
 app = Flask(__name__)
-CORS(app, resources={r"/generate": {"origins": "http://localhost:3000"}})
+CORS(app, resources={r"/generate": {"origins": "https://chenqiwei.org"}})
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -20,7 +20,7 @@ def test():
 def generate():
     if request.method == 'OPTIONS':
         response = jsonify({'status': 'OK'})
-        response.headers.add('Access-Control-Allow-Origin', 'http://localhost:3000')
+        response.headers.add('Access-Control-Allow-Origin', 'https://chenqiwei.org')
         response.headers.add('Access-Control-Allow-Methods', 'POST, OPTIONS')
         response.headers.add('Access-Control-Allow-Headers', 'Content-Type')
         return response

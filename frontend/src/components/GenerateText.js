@@ -10,7 +10,7 @@ const GenerateText = () => {
   const handleSubmit = async (e, model, setGeneratedText) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5001/generate', { model });
+      const response = await axios.post('https://api.chenqiwei.org/generate', { model });
       console.log('Response from backend:', response.data);
       if (response.data.error) {
         console.error('Backend error:', response.data.error);
