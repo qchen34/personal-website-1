@@ -2,23 +2,35 @@
 
 .main-page {
   text-align: center;
+  padding-top: 60px;  /* 为固定菜单留出空间 */
 }
 
 .main-header {
-  background-color: #282c34;
-  color: white;
-  height: 100vh;
+  min-height: calc(100vh - 60px);
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+}
+
+.main-header h1 {
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.main-header p {
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .career-path {
   padding: 40px 20px;
-  background-color: #f4f4f9;
+  background-color: #ffffff;
 }
 
 .timeline {
@@ -101,4 +113,58 @@
 
 .main-content {
   /* Inherit styles from common.css */
+}
+
+.twitter-section {
+  padding: 40px 20px;
+  background-color: var(--secondary-bg);
+}
+
+.twitter-timeline-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.main-footer {
+  background-color: var(--secondary-bg);
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--accent-color);
+}
+
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
 }

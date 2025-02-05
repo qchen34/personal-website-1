@@ -10,16 +10,20 @@ const Projects = () => {
         <div className="project-block">
           <Link to="/generate">
             <div className="project-content">
-              <h2>Project 1: Generate Shakespeare text</h2>
+              <h2>Project 1: </h2>
+              <h3>nanoGPT for Shakespeare</h3>
               <p>Click to generate text</p>
             </div>
           </Link>
         </div>
         <div className="project-block">
-          <div className="project-content">
-            <h2>Project 2</h2>
-            <p>Description of Project 2</p>
-          </div>
+          <Link to="/therapy">
+            <div className="project-content">
+              <h2>Project 2: </h2>
+              <h3>Therapy Chat</h3>
+              <p>Click to chat with AI Therapist</p>
+            </div>
+          </Link>
         </div>
         <div className="project-block">
           <div className="project-content">

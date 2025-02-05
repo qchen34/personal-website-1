@@ -18,8 +18,15 @@ const MainPage = () => {
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Initial check
 
+    // 加载 Twitter widget
+    const script = document.createElement("script");
+    script.src = "https://platform.twitter.com/widgets.js";
+    script.async = true;
+    document.body.appendChild(script);
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      document.body.removeChild(script);
     };
   }, []);
 
@@ -76,6 +83,28 @@ const MainPage = () => {
           <p>Description of the latest idea 3.</p>
         </div>
       </section>
+      <section className="twitter-section">
+        <h2>Latest Tweets</h2>
+        <div className="twitter-timeline-container">
+          <a 
+            className="twitter-timeline" 
+            data-height="600"
+            data-theme="light"
+            href="https://twitter.com/CxrisChen34">
+            Loading Tweets...
+          </a>
+        </div>
+      </section>
+      <footer className="main-footer">
+        <div className="footer-content">
+          <p>© 2024 Your Name. All rights reserved.</p>
+          <div className="social-links">
+            <a href="https://twitter.com/CxrisChen34" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

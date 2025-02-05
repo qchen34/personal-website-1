@@ -1,5 +1,25 @@
+:root {
+  --primary-bg: #f5f5f5;
+  --secondary-bg: #ffffff;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --accent-color: #4a90e2;
+}
+
 .App {
   text-align: center;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--primary-bg);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text-primary);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--primary-bg);
 }
 
 .App-logo {
@@ -34,5 +54,19 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* 响应式字体大小 */
+@media screen and (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 2vmin);
+  }
+}
+
+/* 小屏幕设备优化 */
+@media screen and (max-width: 480px) {
+  .App-logo {
+    height: 30vmin;
   }
 }

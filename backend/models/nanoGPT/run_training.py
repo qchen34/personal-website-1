@@ -4,9 +4,9 @@ import subprocess
 
 # Define training configurations
 training_configs = [
-    #{'max_iters': 2000, 'lr_decay_iters': 2000, 'out_dir': 'out-shakespeare-char-2000'},
+    {'max_iters': 2000, 'lr_decay_iters': 2000, 'out_dir': 'out-shakespeare-char-2000'},
     {'max_iters': 4000, 'lr_decay_iters': 4000, 'out_dir': 'out-shakespeare-char-4000'},
-    #{'max_iters': 8000, 'lr_decay_iters': 8000, 'out_dir': 'out-shakespeare-char-8000'}
+    {'max_iters': 8000, 'lr_decay_iters': 8000, 'out_dir': 'out-shakespeare-char-8000'}
 ]
 
 # Base command

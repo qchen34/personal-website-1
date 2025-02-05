@@ -2,7 +2,12 @@
 
 .menu {
   background-color: #333;
-  padding: 20px 0;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .menu ul {
@@ -46,4 +51,35 @@
 
 .menu a:hover {
   color: #ddd;
+}
+
+/* 响应式菜单调整 */
+@media screen and (max-width: 768px) {
+  .menu ul {
+    flex-wrap: wrap;
+  }
+
+  .menu li {
+    margin: 5px 10px;
+  }
+
+  .menu a {
+    font-size: 14px;
+  }
+}
+
+/* 移动端菜单样式 */
+@media screen and (max-width: 480px) {
+  .menu {
+    padding: 10px 0;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu li {
+    margin: 5px 0;
+  }
 }

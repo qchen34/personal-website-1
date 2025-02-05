@@ -2,48 +2,56 @@
 
 .projects-page {
   text-align: center;
-  padding: 20px;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+  padding: 80px 20px 20px;
+  min-height: 100vh;
+  background-color: var(--primary-bg);
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  flex-grow: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .project-block {
-  /* Inherit styles from common.css */
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: var(--secondary-bg);
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.project-block a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .project-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  z-index: 1;
+  color: var(--text-primary);
 }
 
-.project-block::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.7;
-  z-index: 0;
+.project-content h2 {
+  color: var(--text-primary);
+  margin-bottom: 15px;
+}
+
+.project-content p {
+  color: var(--text-secondary);
+}
+
+.project-block:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
 }

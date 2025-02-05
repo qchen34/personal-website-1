@@ -1,43 +1,136 @@
 @import './common.css';
 
 .container {
-  max-width: 100%;
-  padding: 20px;
+  max-width: 1200px;
+  margin: 80px auto 20px;
+  padding: 0 20px;
 }
 
-.card {
-  /* Inherit styles from common.css */
+.section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.section h1 {
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.section p {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .model-block {
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.model-block h2 {
+  color: var(--text-primary);
+  margin-bottom: 15px;
+}
+
+.model-block form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.model-block button {
+  flex: 1;
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 100px;
   display: inline-block;
-  width: 30%;
-  margin: 1%;
-  vertical-align: top;
+}
+
+.model-block button[type="button"] {
+  background-color: #6c757d;  /* 为 Clear 按钮设置不同的颜色 */
+}
+
+.model-block button:hover {
+  background-color: var(--accent-color-dark);
+  opacity: 0.9;
+}
+
+.model-block button[type="button"]:hover {
+  background-color: #5a6268;
 }
 
 .output {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  margin-top: 20px;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-  white-space: pre-wrap; /* Preserve spaces and new lines */
+  margin-top: 15px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 4px;
+  white-space: pre-wrap;
 }
 
-.output h2 {
-  margin-top: 0;
-  font-size: 1.5em;
-  color: #444;
+.output h3 {
+  color: var(--text-primary);
+  margin-bottom: 10px;
 }
 
-.output p {
-  margin-bottom: 0;
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
 }
 
-button {
-  margin-right: 10px; /* Add margin to separate buttons */
+.button-container button {
+  padding: 10px 20px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-container button:last-child {
+  background: #dc3545;
+}
+
+.generate-btn:disabled, .clear-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 768px) {
+  .models-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .section {
+    padding: 15px;
+  }
+
+  .model-block button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .generate-btn, .clear-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
 }

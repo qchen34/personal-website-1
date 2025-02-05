@@ -1,57 +1,91 @@
 /* Container */
 .container {
     width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0;
-  }
-  
-  /* Card/Block */
-  .card, .block, .project-block {
-    background-color: #fff;
+    padding: 0 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* 响应式布局的断点 */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.7em; }
+    h3 { font-size: 1.3em; }
+    p { font-size: 14px; }
+}
+
+/* Card/Block */
+.card, .block, .project-block {
+    background-color: var(--secondary-bg);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 10px 0;
     transition: transform 0.3s, box-shadow 0.3s;
-  }
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
   
-  .card:hover, .block:hover, .project-block:hover {
+.card:hover, .block:hover, .project-block:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
+}
   
-  /* Headers */
-  h1, h2, h3 {
-    color: #333;
-    margin-top: 0;
-  }
+/* Headers */
+h1, h2, h3 {
+    color: var(--text-primary);
+    font-weight: 500;
+    line-height: 1.4;
+}
   
-  h1 {
+h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
-  }
+}
   
-  h2 {
+h2 {
     font-size: 2em;
     margin-bottom: 15px;
-  }
+}
   
-  h3 {
+h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
-  }
+}
   
-  /* Text */
-  p {
-    color: #555;
+/* Text */
+p {
+    color: var(--text-secondary);
+    line-height: 1.6;
     font-size: 16px;
     margin-bottom: 20px;
-  }
+}
   
-  /* Flexbox Layout */
-  .flex-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
-  }
+/* Flexbox Layout */
+.flex-container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Flexbox Layout 响应式调整 */
+@media screen and (max-width: 600px) {
+    .flex-container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card, .block, .project-block {
+        margin: 8px 0;
+        padding: 12px;
+    }
+}

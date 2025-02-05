@@ -7,6 +7,7 @@ import Tennis from './components/ui/Tennis';
 import About from './components/ui/About';
 import GenerateText from './components/GenerateText';
 import TrainModel from './components/TrainModel';
+import TherapyChat from './components/TherapyChat';
 
 const App = () => (
   <Router>
@@ -20,6 +21,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/generate" element={<GenerateText />} />
           <Route path="/train" element={<TrainModel />} />
+          <Route path="/therapy" element={<TherapyChat />} />
         </Routes>
       </main>
     </div>
