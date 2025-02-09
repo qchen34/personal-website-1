@@ -17,7 +17,7 @@ training_configs = [
 
 # Base command
 base_command = [
-    "python", "train.py", "config/train_shakespeare_char.py",
+    "python", "models/nanoGPT/train.py", "models/nanoGPT/config/train_shakespeare_char.py",
     "--device=cpu", "--compile=False", "--eval_iters=20", "--log_interval=1",
     "--block_size=64", "--batch_size=64", "--n_layer=6", "--n_head=8", "--n_embd=384", "--dropout=0.0", "--learning_rate=3e-4"
 ]
