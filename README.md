@@ -32,6 +32,18 @@ So the idea has changed to just showcase the result of the trained model's gener
 
 in the 2nd phase, I wanted to collect some data of my own, and train a Jordan Peterson's text generator. I valued Dr. Peterson's idea a lot, so I think it would be beneficial for people to see his suggestion or words of wisdom once in a while.
 
+But if you tried to go to my website/projects, and clicked generate on some of the pre-trained models, you will find that the generated text is not that good. It was able to generate some words that is English, but you will find that the text is not coherent and sometimes it even generate some gibberish.
+
+This is mainly due to the way of training the model, as a beginner, I started training the model in a easy way, which is on character level. 
+
 
 ## Project 2
-The second project is a chatbot that uses Deepseek API to simulate a therapy session. Aimming to imitate Jordan Peterson's philosophy in traditional and modern psychology on solving real-world probelms.
+The second project is a text generation tool mainly for pyschologyical therapy purpose. I have found that many young people are suffering from anxiety and depression, in the past few years, technology has developed in a very fast pace, while many students are pursuing a career in the tech industry, focusing on the "stem" subjects, yet lack the education or resources to learn about the humanistic side of the world. 
+
+The second project will implement a state-of-the-art text generation model, and fine tune it based on the psychological datas that I have collected. So that it can be used to generate daily psychological therapy text. 
+
+The main reason that I decided not to build a chatbot is due to cost issues, as you may all know that supporting the server of a LLM chatbot is very expensive. 
+
+The steps of building this project is as follows:
+1. Load the pre-trained models from huggingface.
+2. Fine-tune the model based on the psychological datas.
